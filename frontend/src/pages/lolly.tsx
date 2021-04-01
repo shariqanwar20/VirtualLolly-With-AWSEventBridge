@@ -7,7 +7,6 @@ import { Header } from "../components/Header";
 import { navigate } from "gatsby";
 import LollyTemplate from "../components/LollyTemplate";
 import { API } from "aws-amplify";
-import { AddLolly } from "../API";
 import { createLolly } from "../graphql/mutations";
 import { Spinner } from "react-bootstrap";
 import * as crypto from 'crypto';
@@ -28,7 +27,7 @@ export default () => {
     );
   };
 
-  const addLolly = async (lolly: AddLolly) => {
+  const addLolly = async (lolly: any) => {
     setLoading(true)
 
     const id = { id : crypto.randomBytes(32).toString("hex") }
