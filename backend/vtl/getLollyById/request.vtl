@@ -1,0 +1,13 @@
+{
+    "version" : "2018-05-29",
+    "operation" : "Scan",
+    "filter" : {
+        "expression" : "#id = :id",
+        "expressionNames" : {
+            "#id" : "id",
+        },
+        "expressionValues" : {
+            ":id" : $util.dynamodb.toDynamoDBJson($context.arguments.id)
+        },
+    }
+}

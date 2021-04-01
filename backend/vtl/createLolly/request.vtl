@@ -1,0 +1,21 @@
+{
+    "version": "2018-05-29",
+    "method": "POST",
+    "resourcePath": "/",
+    "params": {
+        "headers": {
+        "content-type": "application/x-amz-json-1.1",
+        "x-amz-target":"AWSEvents.PutEvents"
+        },
+        "body": {
+            "Entries": [
+                {
+                    "Source": "appsync-add-event",
+                    "EventBusName": "default",
+                    "Detail": "{ \"id\" : \"$ctx.arguments.lolly.id\", \"sender\" : \"$ctx.arguments.lolly.sender\", \"reciever\" : \"$ctx.arguments.lolly.reciever\", \"message\" : \"$ctx.arguments.lolly.message\", \"lollyTop\" : \"$ctx.arguments.lolly.lollyTop\", \"lollyMiddle\" : \"$ctx.arguments.lolly.lollyMiddle\", \"lollyBottom\" : \"$ctx.arguments.lolly.lollyBottom\" }",
+                    "DetailType": "add bookmark via graphql"
+                }
+            ]
+        }
+    }
+}
